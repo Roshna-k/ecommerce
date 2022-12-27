@@ -1,0 +1,49 @@
+<!-- when cart is empty -->
+<ng-container *ngIf="cartItemListArray.length==0">
+    <div class="container text-center border-top-3">
+        <div class="card">
+            <h5 class="">My Cart</h5>
+        </div>
+        <div class="center mt-3 mb-3">
+            <!-- <h4>Your Cart is Empty</h4> -->
+            <img src="https://i.postimg.cc/jqfqPzSg/174-1749396-empty-cart-your-cart-is-empty-hd-png.png" alt="">
+        </div>
+        <button  routerLink="" class="btn btn-primary mt-3 mb-3">Shop Now</button>
+
+    </div>
+
+ </ng-container> 
+<ng-container *ngIf="cartItemListArray.length!=0"> 
+
+    <div class="container text-center border-top-5 ">
+        <table class="table border  ">
+            <thead>
+                <th>serial No</th>
+                <th>Product name</th>
+                <th>product Image</th>
+                <th>description</th>
+                <th>price</th>
+                <!-- <th>Quantity</th>
+                <th>Total</th> -->
+                <th>Action</th>
+            </thead>
+            <tbody >
+                <tr *ngFor="let item of products">
+                    <td>{{item.id}}</td>
+                    <td>{{item.title}}</td>
+                    <td><img  width="50px" src="{{item.image}}" alt=""></td>
+                    <td style="width: 25%;">{{item.description}}</td>
+                    <td style="width: 12%;">{{item.price}}</td>
+                    <!-- <td style="width: 12%;">{{item.quantity}}</td>
+                    <td style="width: 12%;">{{item.total}}</td> -->
+                    <td><button (click)="removeItemCart(item)" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button></td> 
+              </tr>  
+                <tr ><td colspan="4"></td>
+                    <td><button routerLink="/moreProducts" class="btn btn-primary">shop more</button></td>
+                    <td><button (click)="checkout()" class="btn btn-success"> check out</button></td>
+                    <!-- <td><strong>Grand Total {{totalPrice}}</strong></td> -->
+                </tr>
+            </tbody>
+        </table>
+    </div>
+ </ng-container> 

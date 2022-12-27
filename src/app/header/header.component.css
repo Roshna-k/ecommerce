@@ -1,0 +1,10 @@
+#mainNav{
+    background-color: rgb(5, 5, 5);
+}
+ .nav-link:hover{
+transform: scale(1.2);
+}
+.navbar-brand{
+    font-family: 'Nerko One', cursive;
+    font-size: 30px;
+}

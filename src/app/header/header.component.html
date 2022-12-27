@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm " id="mainNav">
+    <div class="container px-3">
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav  me-4 my-3 my-lg-0">
+                <li class="nav-item "><a class="nav-link me-lg-3 text-white" href="men">Men</a></li>
+                <li class="nav-item"><a class="nav-link me-lg-3 text-white" href="women">Women</a></li>
+
+            </ul>
+            
+        </div>
+        
+        <a class="navbar-brand fw-bold " href="#"><i class="fa-solid fa-dove"></i>allbirds</a>
+        <form class="d-flex mx-3" role="search">
+            <input (keyup)="search($event)" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          </form>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+                <!-- <li class="nav-item"><a class="nav-link me-lg-3 text-white" routerLink="/wishlist"><i class="fa-solid fa-heart"></i>WishList</a></li> -->
+                <li class="nav-item"><a class="nav-link me-lg-3 text-white" routerLink="/cart"><i class="fa-solid fa-cart-shopping"></i>Cart</a></li>
+            </ul>
+            
+        </div>
+    </div>
+</nav>
